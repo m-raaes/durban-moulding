@@ -69,6 +69,12 @@
             padding: 20px;
             border-radius: 8px;
             background-color: white;
+            /* Ensure fixed aspect ratio for image alignment */
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
        .product-item h3 {
             color: var(--primary-color);
@@ -78,8 +84,10 @@
             border-color: var(--primary-color);
         }
        .product-image {
-            max-width: 100%;
-            height: auto;
+            /* Image specific styling */
+            width: 100%; /* Take up the full width of the container */
+            max-height: 200px; /* Set a maximum height for consistency */
+            object-fit: contain; /* Ensures the image fits without cropping or stretching */
             border-radius: 4px;
             margin-bottom: 15px;
         }
@@ -170,7 +178,7 @@
 
     <header>
         <div class="container">
-            <h2></h2>
+            <h2>DURBAN MOULDING</h2>
             <p>Durban's Rigid Packaging Partner</p>
         </div>
     </header>
@@ -188,24 +196,42 @@
             <p style="text-align: center;">Ready-to-run molds for immediate order fulfillment. Our unique square design is ideal for personal care and premium chemical lines.</p>
             
             <div class="product-grid">
+                <!-- PRODUCT 1: 100ml Square Bottle (Using the uploaded image as example) -->
                 <div class="product-item featured">
-                    <img src="placeholder-100ml-square.jpg" alt="100ml Square HDPE Bottle" class="product-image">
+                    <!-- CHANGED: Placeholder replaced with <img> tag -->
+                    <img src="100ml listing aesth.jpeg" alt="100ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=100ml+Square'">
                     <h3>100ml Square Bottle</h3>
                     <p>HDPE. Screw Cap Finish. Ideal for sanitizers and cosmetics.</p>
                 </div>
+                
+                <!-- PRODUCT 2: 50ml Square Bottle -->
                 <div class="product-item">
+                    <!-- CHANGED: Placeholder replaced with <img> tag -->
+                    <img src="50ml_square.jpg" alt="50ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/dddddd/333333?text=50ml+Square'">
                     <h3>50ml Square Bottle</h3>
                     <p>Compact size for samples or travel kits. HDPE.</p>
                 </div>
+                
+                <!-- PRODUCT 3: 200ml Square Bottle -->
                 <div class="product-item">
+                    <!-- CHANGED: Placeholder replaced with <img> tag -->
+                    <img src="200ml_square.jpg" alt="200ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=200ml+Square'">
                     <h3>200ml Square Bottle</h3>
                     <p>Mid-volume container, excellent shelf presence. HDPE.</p>
                 </div>
+                
+                <!-- PRODUCT 4: 250ml Square Bottle -->
                 <div class="product-item">
+                    <!-- CHANGED: Placeholder replaced with <img> tag -->
+                    <img src="250ml_square.jpg" alt="250ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/dddddd/333333?text=250ml+Square'">
                     <h3>250ml Square Bottle</h3>
                     <p>Standard retail size. HDPE.</p>
                 </div>
+                
+                <!-- PRODUCT 5: 500ml Round Bottle -->
                 <div class="product-item">
+                    <!-- CHANGED: Placeholder replaced with <img> tag -->
+                    <img src="500ml_round.jpg" alt="500ml Round HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=500ml+Round'">
                     <h3>500ml Round Bottle</h3>
                     <p>High-volume commodity container. HDPE.</p>
                 </div>
