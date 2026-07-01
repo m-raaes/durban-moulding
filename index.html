@@ -263,7 +263,7 @@ footer {
                 <!-- PRODUCT 2: 100ml Square Bottle (Using the uploaded image as example) -->
                 <div class="product-item featured">
                     <!-- CHANGED: Placeholder replaced with <img> tag -->
-                    <img src="images/100ml bottle with screw cap.png" alt="100ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=100ml+Square'">
+                    <img src="images/100ml bottle with white cap.png" alt="100ml Square HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=100ml+Square'">
                     <h3>100ml Square Bottle</h3>
                     <p>HDPE. Screw Cap Finish. Ideal for sanitizers and cosmetics.</p>
                 </div>
@@ -289,7 +289,7 @@ footer {
                 <!-- PRODUCT 5: 500ml Round Bottle -->
                 <div class="product-item">
                     <!-- CHANGED: Placeholder replaced with <img> tag -->
-                    <img src="500ml_round.jpg" alt="500ml Round HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=500ml+Round'">
+                    <img src="500ml bottle dm.jpeg" alt="500ml Round HDPE Bottle" class="product-image" onerror="this.src='https://placehold.co/300x200/cccccc/333333?text=500ml+Round'">
                     <h3>500ml Round Bottle</h3>
                     <p>High-volume commodity container. HDPE.</p>
                 </div>
@@ -333,13 +333,18 @@ footer {
         <div class="container">
             <h2 style="text-align: center;">Connect with Our Team in Durban</h2>
             <form name="durban-moulding-contact" method="POST" data-netlify="true">
-                <input type="text" placeholder="Your Name" required>
-                <input type="text" placeholder="Company Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Required Bottle Size (e.g., 250ml Square)" required>
-                <textarea placeholder="Tell us about your volume requirements or toll processing needs." rows="5" required></textarea>
-                <button type="submit">Request a Quote</button>
-            </form>
+    <!-- Required hidden input for Netlify bot compliance if needed, but often automatic -->
+    <input type="hidden" name="form-name" value="durban-moulding-contact" />
+
+    <!-- ADDED NAME ATTRIBUTES BELOW -->
+    <input type="text" name="client_name" placeholder="Your Name" required>
+    <input type="text" name="company_name" placeholder="Company Name" required>
+    <input type="email" name="email_address" placeholder="Email Address" required>
+    <input type="text" name="requested_size" placeholder="Required Bottle Size (e.g., 250ml Square)" required>
+    <textarea name="volume_requirements" placeholder="Tell us about your volume requirements or toll processing needs." rows="5" required></textarea>
+    
+    <button type="submit">Request a Quote</button>
+</form>
             <div class="address-info">
                 <p><strong>Phone: +27 73 877 6931</strong></p>
                 <p><strong>Email: info@durbanmoulding.co.za</strong></p>
